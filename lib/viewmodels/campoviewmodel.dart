@@ -19,7 +19,7 @@ class CampoViewModel {
     }
   }
 
-  void abrirCampo(Campo c) {
+  abrirCampo(Campo c) {
     if (c.aberto) {
       return;
     }
@@ -55,5 +55,17 @@ class CampoViewModel {
 
   int get qtdeMinasNaVizinhanca {
     return campo.vizinhos.where((element) => element.minado).length;
+  }
+
+  void minar() {
+    campo.minar();
+  }
+
+  void abrir() {
+    campo.abrir();
+  }
+
+  bool get aberto {
+    return campo.aberto;
   }
 }
